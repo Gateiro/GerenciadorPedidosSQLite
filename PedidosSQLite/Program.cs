@@ -2,23 +2,23 @@
 using Microsoft.Data.Sqlite;
 using System.IO;
 using PedidosSQLite.model;
+using PedidosSQLite.database;
 using SQLitePCL;
-
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Program
-
 {
     public static void Main()
     {
         SQLitePCL.Batteries.Init();
-
         
-        Console.WriteLine("----- Conexão DB -----\n1) Primeira Conexão\n2) Testar conexão\n3) Sair");
-        string opc = Console.ReadLine();
+
         bool loop = true;
         while (loop)
         {
+            Console.WriteLine("\n----- Conexão DB -----\n1) Primeira Conexão\n2) Testar conexão\n3)CriarTabelas\n4) Sair");
+            string opc = Console.ReadLine();
+
             switch (opc)
             {
                 case "1":
@@ -27,22 +27,24 @@ public class Program
                 case "2":
                     if (dbConexao.dbConectar())
                     {
-                        Console.WriteLine("Conexão bem-sucedida");
+                        Console.WriteLine("\nConexão bem-sucedida");
                     }
                     else
                     {
-                        Console.WriteLine("Falha na conexão");
+                        Console.WriteLine("\nFalha na conexão");
                     }
                     break;
                 case "3":
-                    Environment.Exit(0);
+                    baseTabelas.iniciarTabelas();
+                    break;
+                
+                case "4":
+                    loop = false;
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
                     break;
             }
         }
-        
-
     }
 }
