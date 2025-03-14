@@ -4,59 +4,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
-using System.IO; // Adicionado como alternativa para gerenciar o caminho até o arquivo do DB
+using System.IO;
+
 
 namespace PedidosSQLite.model
 {
     public static class dbConexao
     {
-        public static void dbInicializar() //Valida se o arquivo do DB existe, caso não exista, cria o arquivo e a tabela
-        {
-            string pastaLocal = AppDomain.CurrentDomain.BaseDirectory; // Obtem a pasta base do projeto
-            string dbCaminho = Path.Combine(pastaLocal, "pedidos.db"); // Cria o caminho até o arquivo do DB
+        private static string strConexao = @"Data Source=C:\Users\mathe\OneDrive\Documentos\Github\GerenciadorPedidosSQLite\PedidosSQLite\database\pedidosTeste.db";
 
-            if (!File.Exists(dbCaminho))
+        public static void dbConectar()
+        {
+            try
             {
-                using (FileStream fs = File.Create(dbCaminho))
+                using (SqliteConnection cnx = new SqliteConnection(strConexao))
                 {
-                    Console.WriteLine("Banco de dados criado com sucesso");   // O arquivo é criado aqui
+                    if (cnx.State == System.Data.ConnectionState.Closed)
+                    {
+                        cnx.Open();
+                        Console.WriteLine("Conexão com o banco de dados estabelecida com sucesso.");
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Banco de dados já existe");
-            }
-
-            using (var db = new SqliteConnection($"Filename={dbCaminho}"))
-            {
-                db.Open();
-
-                string criarTabela = "CREATE TABLE IF NOT " +
-                    "EXISTS MyTable (Primary_Key INTEGER PRIMARY KEY, " +
-                    "Text_Entry NVARCHAR(2048) NULL)";
-
-                var createTable = new SqliteCommand(criarTabela, db);
-
-                createTable.ExecuteReader();
+                Console.WriteLine("Erro ao conectar com o banco de dados: " + ex.Message);
             }
         }
 
-        public static bool dbConectar()
+        public static void cadastrarCliente()
         {
-            string pastaLocal = AppDomain.CurrentDomain.BaseDirectory; // Obtem a pasta base do projeto
-            string dbCaminho = Path.Combine(pastaLocal, "pedidos.db"); // Cria o caminho até o arquivo do DB
-
             try
             {
-                using (var db = new SqliteConnection($"Filename={dbCaminho}"))
+                using (SqliteConnection cnx = new SqliteConnection(strConexao))
                 {
-                    db.Open();
-                    return true; // Conexão bem-sucedida
+                    if (cnx.State == System.Data.ConnectionState.Closed)
+                    {
+                        cnx.Open();
+                        Console.WriteLine("Conexão com o banco de dados estabelecida com sucesso.");
+
+                        Console.WriteLine("\n--- CADASTRO DE CLIENTES ---\nDigite o nme: ");
+                        string nome = Console.ReadLine();
+                        Console.WriteLine("Digite o email: ");
+                        string email = Console.ReadLine();
+                        string sql = "INSERT INTO clientes (nome, email) VALUES (@nome, @email)";
+                        using (SqliteCommand cmd = new SqliteCommand(sql, cnx))
+                        {
+                            cmd.Parameters.AddWithValue("@nome", nome);
+                            cmd.Parameters.AddWithValue("@email", email);
+                            cmd.ExecuteNonQuery();
+                            Console.WriteLine("Cliente cadastrado com sucesso.");
+                        }
+
+                    }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false; // Falha na conexão
+                Console.WriteLine("Erro ao conectar com o banco de dados: " + ex.Message);
             }
         }
     }

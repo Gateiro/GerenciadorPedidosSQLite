@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\",
+  "WorkspaceRootPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\GerenciadorPedidosSQLite\\PedidosSQLite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|c:\\users\\mathe\\onedrive\\documentos\\github\\pedidossqlite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|c:\\users\\mathe\\onedrive\\documentos\\github\\pedidossqlite\\model\\dbconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|c:\\users\\mathe\\onedrive\\documentos\\github\\gerenciadorpedidossqlite\\pedidossqlite\\model\\dbconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|solutionrelative:model\\dbconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|c:\\users\\mathe\\onedrive\\documentos\\github\\pedidossqlite\\database\\pedidos.db||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|solutionrelative:database\\pedidos.db||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|c:\\users\\mathe\\onedrive\\documentos\\github\\gerenciadorpedidossqlite\\pedidossqlite\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C6D011-A365-40F9-84A6-1F9013909547}|PedidosSQLite.csproj|solutionrelative:view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\GerenciadorPedidosSQLite\\PedidosSQLite\\view\\Menu.cs",
+              "RelativeDocumentMoniker": "view\\Menu.cs",
+              "ToolTip": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\GerenciadorPedidosSQLite\\PedidosSQLite\\view\\Menu.cs",
+              "RelativeToolTip": "view\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T15:22:57.404Z",
               "IsPinned": true,
@@ -40,33 +36,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "dbConexao.cs",
-              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\model\\dbConexao.cs",
+              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\GerenciadorPedidosSQLite\\PedidosSQLite\\model\\dbConexao.cs",
               "RelativeDocumentMoniker": "model\\dbConexao.cs",
-              "ToolTip": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\model\\dbConexao.cs",
-              "RelativeToolTip": "model\\dbConexao.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\GerenciadorPedidosSQLite\\PedidosSQLite\\model\\dbConexao.cs*",
+              "RelativeToolTip": "model\\dbConexao.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T17:42:26.146Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "pedidos.db",
-              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\database\\pedidos.db",
-              "RelativeDocumentMoniker": "database\\pedidos.db",
-              "ToolTip": "C:\\Users\\mathe\\OneDrive\\Documentos\\Github\\PedidosSQLite\\database\\pedidos.db",
-              "RelativeToolTip": "database\\pedidos.db",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVDhPdVNLT1NBGD3a23gJKaJUwsIEUaMoL2NsGyqxoCYEDRuKi0ZW3WHkL0D8BWqkJsLKQlsX9bGrNhqqRKRutCVp1BhFEiUxVyVx0Ud67/DN3EcvsZ7ck2/uN9/MnDkzswsGYrEY0xgD0zQwippGbabBzPEoORxb5Upl6Nrk5HsxiBeaWFhcZKqqWqxyVmuMx\u002BOsUCiwufn5P3dmI6eMYdhtRLEKh0pRVTlVQZpIkMPtduOs398sSdKSSBBqE5hqKJBovW1B/49Go0ilUihXys0iQZCMKPbMYQ7OrmaRza7C6/PBRxwbC4oe8gGzkYio4bApIPOM9v3oAppa23DpSgiyuw13781ZfRwa1ZqwJuAu86p8Lg//uQA6D7cjt/IKPUcOof/CMNbyearSp6HjEpHjHxMzmSU0NjTgUTKJUCiEJw\u002BT2OtyUT5DKkXJjtPbqYAQGBxEsVhEcHwciUQCl0dHsf5tA1W5CS\u002BWV1AqlcivOlvQZTH09vTi9fJLfF7fgGcggHcfvkBpbEc4HIay/zje5tb\u002Bp0A3kXPi6gSUzR94/CCON3Qaw8da8PzrX4x0HsD3n7/rm1i7BxSJHq8X16em4OnrRvrTL1zscOHpRwVn\u002Brrqmyjugf4JmjjdfQL7lALSz9Locm7hYGuL5ReHTUFNlgAVcVV7ZBlDA/0IjpzHyaMdkOnfXmvzgN9BenGSQ6dTgrMORa1tC9ZzvnnrNm2NjKROvjI/KhGNnFiA2vozZ7gxM01jgW0oG0\u002BFgH6cagAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-03-11T17:24:10.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
