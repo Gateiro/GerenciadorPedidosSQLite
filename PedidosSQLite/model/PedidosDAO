@@ -1,38 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using Microsoft.Data.Sqlite;
-using System.IO;
-
 
 namespace PedidosSQLite.model
 {
-    public static class dbConexao
+    public static class PedidosDAO
     {
-        private static string strConexao = @"Data Source=C:\Users\mathe\OneDrive\Documentos\Github\GerenciadorPedidosSQLite\PedidosSQLite\database\pedidosTeste.db";
+        private static string strConexao = @"Data Source=D:\Usuários\MatheusRodriguesViei\Documents\GitHub\GerenciadorPedidosSQLite\PedidosSQLite\database\pedidosTeste.db";
 
-        public static void dbConectar()
-        {
-            try
-            {
-                using (SqliteConnection cnx = new SqliteConnection(strConexao))
-                {
-                    if (cnx.State == System.Data.ConnectionState.Closed)
-                    {
-                        cnx.Open();
-                        Console.WriteLine("Conexão com o banco de dados estabelecida com sucesso.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao conectar com o banco de dados: " + ex.Message);
-            }
-        }
-
-        public static void cadastrarCliente()
+public static void cadastrarPedidos()
         {
             try
             {
@@ -43,7 +18,7 @@ namespace PedidosSQLite.model
                         cnx.Open();
                         Console.WriteLine("Conexão com o banco de dados estabelecida com sucesso.");
 
-                        Console.WriteLine("\n--- CADASTRO DE CLIENTES ---\nDigite o nme: ");
+                        Console.WriteLine("\n--- CADASTRO DE PEDIDOS ---\nDigite o nome: ");
                         string nome = Console.ReadLine();
                         Console.WriteLine("Digite o email: ");
                         string email = Console.ReadLine();
@@ -64,5 +39,7 @@ namespace PedidosSQLite.model
                 Console.WriteLine("Erro ao conectar com o banco de dados: " + ex.Message);
             }
         }
+
     }
 }
+    

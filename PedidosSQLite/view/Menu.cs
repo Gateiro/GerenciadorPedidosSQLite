@@ -6,15 +6,14 @@ public class Menu
     {
         SQLitePCL.Batteries.Init();
 
-        dbConexao.dbConectar();
+        // Conectar ao banco de dados
+        ConexaoDB.dbConectar();
+
+        // Exibir o diretório atual
         string Diretorio = Directory.GetCurrentDirectory();
-        Console.WriteLine(Diretorio);
-
-        dbConexao.cadastrarCliente();
-
-        
-
-
+        Console.WriteLine("Diretório atual: " + Diretorio);
+        ClientesDAO.listarClientes();
+        // Cadastrar um cliente
+        ClientesDAO.cadastrarCliente();
     }
 }
-
